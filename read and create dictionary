@@ -42,3 +42,5 @@ def print_grades (file_name):
         avg = grades[5]
         print("{0:16s} | {1:6d} | {2:6d} | {3:6d} | {4:6d} | {5:6.2f}" .format(name, grade_1, grade_2, grade_3, grade_4, avg))
     return None
+    
+    and now whats gonna happen          
