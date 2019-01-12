@@ -1,0 +1,16 @@
+def day_of_the_week (input_date):
+    import math
+    days = {0: 'Sunday', 1:'Monday', 2:'Tuesday', 3:'Wednesday', 4:'Thursday', 5:'Friday', 6:'Saturday'}
+    months = {'March':1, 'April':2, 'May':3, 'June':4 ,'July':5, 'August':6, 'September':7, 'October':8, 'November':9, 'December':10, 'January':11, 'Februray':12}
+    my_month, my_day, my_year = input_date.split(" ")
+    day = int(my_day)
+    month = months[my_month]
+    year = int(my_year[2] + my_year[3])
+    centuary = int(my_year[0] + my_year[1])
+    if month > 10:
+        year -= 1
+    w = (day + math.floor(2.6*month - 0.2) - 2*centuary + year +math.floor(year/4) + math.floor(centuary/4)) % 7
+    return days.get(w)
+
+input_date = "January 1 1678"
+print(day_of_the_week(input_date))
