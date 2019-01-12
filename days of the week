@@ -14,3 +14,5 @@ def day_of_the_week (input_date):
 
 input_date = "January 1 1678"
 print(day_of_the_week(input_date))
+
+and if i want to add something
